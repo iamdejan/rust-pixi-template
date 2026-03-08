@@ -57,14 +57,13 @@ Root/
 ├── .gitignore              # Git ignore rules
 ├── .gitattributes          # Git attributes
 ├── .editorconfig           # Editor configuration
+├── .pre-commit-config.yaml # Pre-commit hook configuration
 ├── .github/                # GitHub workflows
 │   └── workflows/
 │       ├── pr-pipeline.yaml
 │       └── trunk-pipeline.yaml
 ├── src/
 │   └── main.rs             # Main entry point
-├── .pixi/                  # Local Pixi environment (ignored by Git)
-│   └── config.toml
 └── .kilocode/              # Kilo Code assistant rules
     └── rules/
         ├── code_generation.md
@@ -84,6 +83,7 @@ This section explains the purpose of each file in the repository:
 | [`.gitignore`](.gitignore) | Specifies files and directories that Git should ignore (e.g., build artifacts in `target/`, IDE files, pixi environments in `.pixi/`). |
 | [`.gitattributes`](.gitattributes) | Git configuration that sets `pixi.lock` to use binary merging (to avoid merge conflicts) and marks it as YAML-generated. |
 | [`.editorconfig`](.editorconfig) | Editor configuration that ensures consistent coding style across different editors (e.g., 4-space indentation for Rust files). |
+| [`.pre-commit-config.yaml`](.pre-commit-config.yaml) | Configuration for pre-commit hooks that run linting and build checks before commits/pushes. |
 
 ### Source Files
 
@@ -96,5 +96,4 @@ This section explains the purpose of each file in the repository:
 | Path | Description |
 |------|-------------|
 | [`.github/`](.github/) | GitHub Actions workflows for CI/CD pipelines. Contains `pr-pipeline.yaml` for pull request checks and `trunk-pipeline.yaml` for the main branch pipeline. |
-| [`.pixi/`](.pixi/) | Local Pixi environment directory (ignored by Git except for `config.toml`). Contains the installed Rust toolchain and other dependencies. |
 | [`.kilocode/`](.kilocode/) | Directory containing development rules and guidelines for the Kilo Code assistant. Includes code generation and validation rules. |
