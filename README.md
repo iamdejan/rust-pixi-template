@@ -50,6 +50,10 @@ Root/
 ├── .gitignore              # Git ignore rules
 ├── .gitattributes          # Git attributes
 ├── .editorconfig           # Editor configuration
+├── .github/                # GitHub workflows
+│   └── workflows/
+│       ├── pr-pipeline.yaml
+│       └── trunk-pipeline.yaml
 ├── src/
 │   └── main.rs             # Main entry point
 ├── .pixi/                  # Local Pixi environment (ignored by Git)
@@ -84,5 +88,6 @@ This section explains the purpose of each file in the repository:
 
 | Path | Description |
 |------|-------------|
+| [`.github/`](.github/) | GitHub Actions workflows for CI/CD pipelines. Contains `pr-pipeline.yaml` for pull request checks and `trunk-pipeline.yaml` for the main branch pipeline. |
 | [`.pixi/`](.pixi/) | Local Pixi environment directory (ignored by Git except for `config.toml`). Contains the installed Rust toolchain and other dependencies. |
 | [`.kilocode/`](.kilocode/) | Directory containing development rules and guidelines for the Kilo Code assistant. Includes code generation and validation rules. |
