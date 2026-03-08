@@ -15,7 +15,7 @@ Before running this program, ensure you have the following installed:
 
 3. **Setup Pre-commit** - Install the pre-commit hooks to automatically run linting and build checks before push:
    ```bash
-   pre-commit install --hook-type pre-push
+   pixi run pre-commit install --hook-type pre-push
    ```
 
    > **Note:** Re-run this command whenever `.pre-commit-config.yaml` is changed to update the hooks.
