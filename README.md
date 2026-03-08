@@ -13,7 +13,14 @@ Before running this program, ensure you have the following installed:
    pixi install
    ```
 
-3. **Build the project** - If you want to build the project without running it, run the following command:
+3. **Setup Pre-commit** - Install the pre-commit hooks to automatically run linting and build checks before commits:
+   ```bash
+   pixi run pre-commit install
+   ```
+
+   > **Note:** Re-run this command whenever `.pre-commit-config.yaml` is changed to update the hooks.
+
+4. **Build the project** - If you want to build the project without running it, run the following command:
    ```bash
    pixi run build
    ```
