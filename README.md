@@ -8,19 +8,33 @@ Before running this program, ensure you have the following installed:
 
 1. **Pixi** - A package manager for Rust and other languages. Install it by following the official guide at [https://pixi.prefix.dev/latest/](https://pixi.prefix.dev/latest/).
 
-2. **Download Dependencies** - Once Pixi is installed, run the following command to download all project dependencies:
+2. **rust-docs-mcp** - An MCP server that provides comprehensive access to Rust crate documentation, source code analysis, dependency trees, and module structure visualization. Install it using one of the following methods:
+
+   **Quick Install (recommended):**
+   ```bash
+   curl -sSL https://raw.githubusercontent.com/snowmead/rust-docs-mcp/main/install.sh | bash
+   ```
+
+   **Or via Cargo:**
+   ```bash
+   cargo install rust-docs-mcp
+   ```
+
+   For more installation options, see the [official installation guide](https://github.com/snowmead/rust-docs-mcp#installation).
+
+3. **Download Dependencies** - Once Pixi is installed, run the following command to download all project dependencies:
    ```bash
    pixi install
    ```
 
-3. **Setup Pre-commit** - Install the pre-commit hooks to automatically run linting and build checks before push:
+4. **Setup Pre-commit** - Install the pre-commit hooks to automatically run linting and build checks before push:
    ```bash
    pixi run pre-commit install --hook-type pre-push
    ```
 
    > **Note:** Re-run this command whenever `.pre-commit-config.yaml` is changed to update the hooks.
 
-4. **Build the project** - If you want to build the project without running it, run the following command:
+5. **Build the project** - If you want to build the project without running it, run the following command:
    ```bash
    pixi run build
    ```
@@ -65,9 +79,10 @@ Root/
 ├── src/
 │   └── main.rs             # Main entry point
 └── .kilocode/              # Kilo Code assistant rules
-    └── rules/
-        ├── code_generation.md
-        └── code_validation.md
+    ├── rules/
+    │   ├── code_generation.md
+    │   └── code_validation.md
+    └── mcp.json           # MCP server configuration
 ```
 
 This section explains the purpose of each file in the repository:
@@ -96,4 +111,4 @@ This section explains the purpose of each file in the repository:
 | Path | Description |
 |------|-------------|
 | [`.github/`](.github/) | GitHub Actions workflows for CI/CD pipelines. Contains `pr-pipeline.yaml` for pull request checks and `trunk-pipeline.yaml` for the main branch pipeline. |
-| [`.kilocode/`](.kilocode/) | Directory containing development rules and guidelines for the Kilo Code assistant. Includes code generation and validation rules. |
+| [`.kilocode/`](.kilocode/) | Directory containing MCP server configuration, as well as development rules and guidelines for the Kilo Code assistant. |
