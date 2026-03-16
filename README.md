@@ -72,17 +72,17 @@ Root/
 ├── .gitattributes          # Git attributes
 ├── .editorconfig           # Editor configuration
 ├── .pre-commit-config.yaml # Pre-commit hook configuration
+├── AGENTS.md               # Agent rules and guidelines
+├── LICENSE.txt             # Project license
 ├── .github/                # GitHub workflows
 │   └── workflows/
 │       ├── pr-pipeline.yaml
 │       └── trunk-pipeline.yaml
+├── .kilocode/              # Kilo Code assistant configuration
+│   └── mcp.json            # MCP server configuration
 ├── src/
 │   └── main.rs             # Main entry point
-└── .kilocode/              # Kilo Code assistant rules
-    ├── rules/
-    │   ├── code_generation.md
-    │   └── code_validation.md
-    └── mcp.json           # MCP server configuration
+└── README.md               # Project documentation
 ```
 
 This section explains the purpose of each file in the repository:
@@ -99,6 +99,8 @@ This section explains the purpose of each file in the repository:
 | [`.gitattributes`](.gitattributes) | Git configuration that sets `pixi.lock` to use binary merging (to avoid merge conflicts) and marks it as YAML-generated. |
 | [`.editorconfig`](.editorconfig) | Editor configuration that ensures consistent coding style across different editors (e.g., 4-space indentation for Rust files). |
 | [`.pre-commit-config.yaml`](.pre-commit-config.yaml) | Configuration for pre-commit hooks that run linting and build checks before commits/pushes. |
+| [`AGENTS.md`](AGENTS.md) | Rules and guidelines for the Kilo Code assistant, including code generation and debugging procedures. |
+| [`LICENSE.txt`](LICENSE.txt) | Project license file containing the terms under which the software is distributed. |
 
 ### Source Files
 
@@ -111,4 +113,4 @@ This section explains the purpose of each file in the repository:
 | Path | Description |
 |------|-------------|
 | [`.github/`](.github/) | GitHub Actions workflows for CI/CD pipelines. Contains `pr-pipeline.yaml` for pull request checks and `trunk-pipeline.yaml` for the main branch pipeline. |
-| [`.kilocode/`](.kilocode/) | Directory containing MCP server configuration, as well as development rules and guidelines for the Kilo Code assistant. |
+| [`.kilocode/`](.kilocode/) | Directory containing MCP server configuration for the Kilo Code assistant. Contains `mcp.json` which defines available tools and resources. |
