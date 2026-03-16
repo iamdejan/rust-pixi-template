@@ -1,5 +1,5 @@
 fn greet(name: &'static str) -> String {
-    return format!("Hello, {}!", name);
+    return format!("Hello, {name}!");
 }
 
 fn main() {
