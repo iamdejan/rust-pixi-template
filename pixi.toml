@@ -18,5 +18,5 @@ doc = "cargo doc"
 doc-open = "cargo doc --open"
 
 [dependencies]
-rust = ">=1.93.1,<1.94"
+rust = ">=1.94.0,<1.95"
 pre-commit = ">=4.5.1,<5"
